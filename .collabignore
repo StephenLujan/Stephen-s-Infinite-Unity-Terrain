@@ -1,0 +1,50 @@
+# ===========================
+# Default Collab Ignore Rules
+# ===========================
+
+# OS Generated
+# ============
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Visual Studio / MonoDevelop generated
+# =====================================
+[Ee]xported[Oo]bj/
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+[Pp]ackages
+/[Pp]ackages/
+.vs
+Logs
+
+# Unity generated
+# ===============
+/[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+*.log
+Temp
+_TerrainAutoUpgrade/
+
+# store assets
+# ============
+/Assets/FromStore/**
+
+# git
+# ===
+.git
