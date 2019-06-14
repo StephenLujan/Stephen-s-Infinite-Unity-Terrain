@@ -17,13 +17,14 @@ Terrain generator and manager creating infinite terrain in the Unity game engine
 
 ### Planned Features
 (in rough order of current priorities)
+* Finish work on DetailMaps and SpeedTrees
 * Easy hooks for loading and unloading game specific content and behavior
 * Saving terrain to hard-drive allowing for in-game terrain deformations and changes to be persistent, as well as allowing for custom maps in the middle of infinite terrain
 * better functions to add features to terrain programmatically e.g. add structures but flatten the terrain underneath them.
 * Biome based terrain generation
-* custom terrain shaders
+* optional custom terrain shaders
    * Get rid of texture stretching on steep terrain
-   * Perform texture splat mapping on the gpu on the fly to reduce cpu work in creating new tiles
+   * Perform texture splat mapping and detail mapping on the gpu on the fly to reduce cpu work in creating new tiles
    * Better texture blending, PBR textures
    * Allow Macro textures and detail textures
 * Improve heightmap realism beyond what's possible with just fractal noise, mimicking erosion etc.
