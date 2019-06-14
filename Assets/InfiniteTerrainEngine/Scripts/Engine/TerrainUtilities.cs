@@ -9,18 +9,24 @@ namespace StephenLujan.TerrainEngine
 {
     public static class TerrainUtilities
     {
-
+        /// <summary>
+        /// y,x indexed like heightmaps
+        /// </summary>
+        /// <param name="heightMap"></param>
+        /// <param name="terrainHeight"></param>
+        /// <param name="terrainWidth"></param>
+        /// <param name="terrainLength"></param>
+        /// <returns>y,x indexed like heightmaps values from 0 (flat) to 1 (vertical)</returns>
         public static float[,] HeightMapToSlopeMap(float[,] heightMap, float terrainHeight, float terrainWidth, float terrainLength)
         {
-            float scaleX = terrainHeight / terrainWidth;
-            float scaleY = terrainHeight / terrainLength;
+            const float halfpi = Mathf.PI / 2.0f;
+            float heightToWidth = terrainHeight / terrainWidth;
+            float heightToLength = terrainHeight / terrainLength;
 
-            int heightMapWidth = heightMap.GetUpperBound(0) + 1;
-            int heightMapHeight = heightMap.GetUpperBound(1) + 1;
+            int heightMapWidth = heightMap.GetUpperBound(1) + 1;
+            int heightMapHeight = heightMap.GetUpperBound(0) + 1;
 
-            float ux = 1.0f / (heightMapWidth - 1.0f);
-            float uy = 1.0f / (heightMapHeight - 1.0f);
-            float[,] slopeMap = new float[heightMapWidth, heightMapHeight];
+            float[,] slopeMap = new float[heightMapHeight, heightMapWidth];
 
             for (int y = 0; y < heightMapHeight; y++)
             {
@@ -34,19 +40,16 @@ namespace StephenLujan.TerrainEngine
                     int yMinus1 = (y == 0) ? y : y - 1;
 
                     // get heights of neighbors
-                    float left = heightMap[xMinus1, y] * scaleX;
-                    float right = heightMap[xPlus1, y] * scaleX;
+                    float left = heightMap[y, xMinus1];
+                    float right = heightMap[y, xPlus1];
 
-                    float down = heightMap[x, yMinus1] * scaleY;
-                    float up = heightMap[x, yPlus1] * scaleY;
+                    float down = heightMap[yMinus1, x];
+                    float up = heightMap[yPlus1, x];
 
-                    // calculate slope
-                    float dx = (right - left) / (2.0f * ux);
-                    float dy = (down - up) / (2.0f * uy);
-
-                    float g = Mathf.Sqrt(dx * dx + dy * dy);
-                    float slope = g / Mathf.Sqrt(1.0f + g * g);
-                    slopeMap[x, y] = slope;
+                    float xHeightChange = (right - left) * heightToWidth / 2.0f;
+                    float yHeightChange = (up - down) * heightToLength / 2.0f;
+                    float slope = Mathf.Sqrt(xHeightChange * xHeightChange + yHeightChange * yHeightChange);
+                    slopeMap[y, x] = Mathf.Atan(slope) / halfpi;
                 }
             }
             return slopeMap;
