@@ -144,8 +144,8 @@ namespace StephenLujan.TerrainEngine
             HeightMin = Mathf.Min(HeightMin, min);
 
             float normalizationMultiplier = TrueNormalize ? 1.0f / (max - min) : 1.0f / (TransformMax - TransformMin);
-            Debug.Log($"TransformMin: {TransformMin}");
-            Debug.Log($"normalizationMultiplier: {normalizationMultiplier}");
+            //Debug.Log($"TransformMin: {TransformMin}");
+            //Debug.Log($"normalizationMultiplier: {normalizationMultiplier}");
 
             for (int x = 0; x < mapWidth; x++)
             {

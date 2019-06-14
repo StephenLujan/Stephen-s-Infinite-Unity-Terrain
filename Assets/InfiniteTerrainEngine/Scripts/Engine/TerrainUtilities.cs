@@ -20,11 +20,13 @@ namespace StephenLujan.TerrainEngine
         public static float[,] HeightMapToSlopeMap(float[,] heightMap, float terrainHeight, float terrainWidth, float terrainLength)
         {
             const float halfpi = Mathf.PI / 2.0f;
-            float heightToWidth = terrainHeight / terrainWidth;
-            float heightToLength = terrainHeight / terrainLength;
 
             int heightMapWidth = heightMap.GetUpperBound(1) + 1;
             int heightMapHeight = heightMap.GetUpperBound(0) + 1;
+
+            // xFactor and yFactor convert the rise over run across two units in the heightmap into world units
+            float xFactor = terrainHeight / (terrainWidth / (heightMapWidth - 1)) / 2.0f;
+            float yFactor = terrainHeight / (terrainLength / (heightMapHeight - 1)) / 2.0f;
 
             float[,] slopeMap = new float[heightMapHeight, heightMapWidth];
 
@@ -46,8 +48,8 @@ namespace StephenLujan.TerrainEngine
                     float down = heightMap[yMinus1, x];
                     float up = heightMap[yPlus1, x];
 
-                    float xHeightChange = (right - left) * heightToWidth / 2.0f;
-                    float yHeightChange = (up - down) * heightToLength / 2.0f;
+                    float xHeightChange = (right - left) * xFactor;
+                    float yHeightChange = (up - down) * yFactor;
                     float slope = Mathf.Sqrt(xHeightChange * xHeightChange + yHeightChange * yHeightChange);
                     slopeMap[y, x] = Mathf.Atan(slope) / halfpi;
                 }

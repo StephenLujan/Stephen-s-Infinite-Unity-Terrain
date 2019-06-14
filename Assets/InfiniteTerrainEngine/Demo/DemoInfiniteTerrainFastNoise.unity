@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.8018868, g: 0.8018868, b: 0.8392157, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.0005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -198,7 +198,7 @@ Light:
       e33: 1
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -229,25 +229,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &579057297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
-  m_Name: NewLayer 3 Splat Settings
-  m_EditorClassIdentifier: 
-  MinimumHeight: 0.18
-  MaximumHeight: 1
-  MinimumSlope: 0.4
-  MaximumSlope: 1
-  Prototype: {fileID: 8574412962073106934, guid: 70547acfe5ca5c447b68d89ef834b988,
-    type: 2}
---- !u!114 &635897130
+--- !u!114 &210915044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,7 +245,7 @@ MonoBehaviour:
   MaximumHeight: 1
   MinimumSlope: 0
   MaximumSlope: 1
---- !u!114 &1161760629
+--- !u!114 &579057297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,30 +254,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
+  m_Name: NewLayer 3 Splat Settings
   m_EditorClassIdentifier: 
-  MinimumHeight: 0
+  MinimumHeight: 0.18
   MaximumHeight: 1
-  MinimumSlope: 0
+  MinimumSlope: 0.2
   MaximumSlope: 1
---- !u!114 &1262031842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 1
-  MinimumSlope: 0
-  MaximumSlope: 1
---- !u!114 &1272470848
+  Prototype: {fileID: 8574412962073106934, guid: 70547acfe5ca5c447b68d89ef834b988,
+    type: 2}
+--- !u!114 &1178197616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,6 +291,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6205309130830055896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424820738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
 --- !u!114 &1425219506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,9 +322,25 @@ MonoBehaviour:
   MinimumHeight: 0
   MaximumHeight: 0.19
   MinimumSlope: 0
-  MaximumSlope: 0.5
+  MaximumSlope: 0.35
   Prototype: {fileID: 8574412962073106934, guid: a9160541bfa2aa44eab504b126e33485,
     type: 2}
+--- !u!114 &1427770786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
 --- !u!1 &1576357773
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +431,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1663236499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663236500}
+  - component: {fileID: 1663236501}
+  m_Layer: 0
+  m_Name: Curve Shader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1663236500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663236499}
+  m_LocalRotation: {x: -0.27059805, y: -0.6532815, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 256.00003, y: -424.26407, z: 424.26416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1886054336}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663236501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663236499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde754a83616ca845adc1efc18acfba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurveOrigin: {fileID: 1886054336}
+  x: 100
+  y: 100
+  falloff: 0
 --- !u!1 &1886054333
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +529,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 9000
+  far clip plane: 3100
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -511,7 +558,8 @@ Transform:
   m_LocalRotation: {x: 0.27059805, y: 0.6532815, z: -0.27059805, w: 0.6532815}
   m_LocalPosition: {x: -0, y: 600, z: 256}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1663236500}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: 90, z: 0}
@@ -527,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a73815000f037446b051dbd71492dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2110974111
+--- !u!114 &2010704427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,7 +584,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumHeight: 0
@@ -557,7 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumHeight: 0
   MaximumHeight: 0.19
-  MinimumSlope: 0.4
+  MinimumSlope: 0.25
   MaximumSlope: 1
   Prototype: {fileID: 8574412962073106934, guid: 2bfe85550234884448342c11e8bd4d37,
     type: 2}
@@ -708,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 727085324870813369, guid: 11724ac1daf5d67439936524d3473acf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 727085324870813369, guid: 11724ac1daf5d67439936524d3473acf,
         type: 3}
@@ -835,19 +883,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7b4bd3ad594e848bcde22ce0c20295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextureBlendSharpness: 0.5
+  TextureBlendSharpness: 1
   TextureSplatSettings:
   - {fileID: 1425219506}
   - {fileID: 2112269211}
   - {fileID: 128590203}
   - {fileID: 579057297}
   TreeInstanceSettings:
-  - {fileID: 1272470848}
-  - {fileID: 1161760629}
-  - {fileID: 1262031842}
+  - {fileID: 2010704427}
+  - {fileID: 1178197616}
+  - {fileID: 1427770786}
   DetailMapSettings:
-  - {fileID: 635897130}
-  - {fileID: 2110974111}
+  - {fileID: 210915044}
+  - {fileID: 1424820738}
   TerrainNoise: {fileID: 8708552932913635692}
   TemplateTerrain: {fileID: 1378733203}
 --- !u!114 &8708552932913635690
@@ -864,7 +912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainCacheSize: 10
   TerrainGenerator: {fileID: 8708552932913635689}
-  TerrainFillDistance: 2500
+  TerrainFillDistance: 3000
 --- !u!4 &8708552932913635691
 Transform:
   m_ObjectHideFlags: 0
