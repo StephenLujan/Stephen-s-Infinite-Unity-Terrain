@@ -2,8 +2,6 @@
 
 Terrain generator and manager creating infinite terrain in the Unity game engine. This asset will utilitize Unity's built-in Terrain objects to support all features provided by Unity for terrain. Terrain will be continuously loaded and unloaded around the player using multithreaded parallelism as much as possible. This will be a unity store asset, but is provided free here for reading and private non-commercial use.
 
-(http://stephenlujan.com/data/uploads/images/stephens-infinite-unity-terrain/stephens-infinite-unity-terrain-6-13-2019.jpg)
-
 ### Features
 * Effectively infinite contiguous terrain (limited by floating point extremes)
 * Use a custom seed with the same settings get the same terrain in the same places, or random seeds.
