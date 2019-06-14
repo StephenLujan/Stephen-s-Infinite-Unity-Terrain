@@ -12,7 +12,7 @@ Terrain generator and manager creating infinite terrain in the Unity game engine
 * Generates realistic texture splat maps based on terrain height and slope
 * Generates Detail maps (grass etc.) based on terrain height and slope **in progress**
 * Generates SpeedTrees  based on terrain height and slope **in progress**
-* The terrain generator can utilize noise from either the Unity engine or from [Jordan Peck's FastNoise] (https://assetstore.unity.com/packages/tools/particles-effects/fastnoise-70706). 
+* The terrain generator can utilize noise from either the Unity engine or from [Jordan Peck's FastNoise](https://assetstore.unity.com/packages/tools/particles-effects/fastnoise-70706). 
 * Terrain tile caching. (A configurable number of the terrain tiles removed most recently from render for being to far are kept in memory. This prevents the same tiles from being generated over and over if a player is moving around a lot in a small area.)
 
 ### Planned Features
