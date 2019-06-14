@@ -74,13 +74,17 @@ namespace StephenLujan.TerrainEngine
             float slopeMin = slopeMinProp.floatValue;
             float slopeMax = slopeMaxProp.floatValue;
 
-            //EditorGUI.LabelField(
-            //    new Rect(x, y, rightColumnWidth, labelHeight),
-            //    $"Min, Max Height: {heightMin}, {heightMax}");
-            //y += labelHeight;
-            heightMin = EditorGUI.FloatField(new Rect(x, y, rightColumnWidth, labelHeight), "Minimum Height", heightMin);
+            const string heightTip = "1 represents the highest possible terrain elevation while 0 represents the lowest";
+
+            heightMin = EditorGUI.FloatField(
+                new Rect(x, y, rightColumnWidth, labelHeight),
+                new GUIContent("Minimum Height", heightTip),
+                heightMin);
             y += labelHeight;
-            heightMax = EditorGUI.FloatField(new Rect(x, y, rightColumnWidth, labelHeight), "Maximum Height", heightMax);
+            heightMax = EditorGUI.FloatField(
+                new Rect(x, y, rightColumnWidth, labelHeight),
+                new GUIContent("Maximum Height", heightTip),
+                heightMax);
             y += labelHeight;
             EditorGUI.MinMaxSlider(
                 new Rect(x, y, rightColumnWidth, sliderHeight),
@@ -94,9 +98,17 @@ namespace StephenLujan.TerrainEngine
             //    new Rect(x, y, rightColumnWidth, labelHeight),
             //    $"Min, Max Slope: {slopeMin}, {slopeMax}");
             //y += labelHeight;
-            slopeMin = EditorGUI.FloatField(new Rect(x, y, rightColumnWidth, labelHeight), "Minimum Slope", slopeMin);
+
+            const string slopeTip = "A slope of 1 means vertical, 0 means flat, and 0.5 means 45°";
+            slopeMin = EditorGUI.FloatField(
+                new Rect(x, y, rightColumnWidth, labelHeight),
+                new GUIContent("Minimum Slope", slopeTip),
+                slopeMin);
             y += labelHeight;
-            slopeMax = EditorGUI.FloatField(new Rect(x, y, rightColumnWidth, labelHeight), "Maximum Slope", slopeMax);
+            slopeMax = EditorGUI.FloatField(
+                new Rect(x, y, rightColumnWidth, labelHeight),
+                new GUIContent("Maximum Slope", slopeTip),
+                slopeMax);
             y += labelHeight;
             EditorGUI.MinMaxSlider(
                 new Rect(x, y, rightColumnWidth, sliderHeight),
@@ -105,6 +117,8 @@ namespace StephenLujan.TerrainEngine
                 0.0f,
                 1.0f);
             y += sliderHeight;
+
+            //GUI.Label(new Rect(10, 40, 100, 40), GUI.tooltip);
 
             heightMinProp.floatValue = heightMin;
             heightMaxProp.floatValue = heightMax;

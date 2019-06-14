@@ -229,38 +229,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &199642044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 1
-  MinimumSlope: 0
-  MaximumSlope: 1
---- !u!114 &400418263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 1
-  MinimumSlope: 0
-  MaximumSlope: 1
 --- !u!114 &579057297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,11 +243,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumHeight: 0.18
   MaximumHeight: 1
-  MinimumSlope: 0
-  MaximumSlope: 0.4
+  MinimumSlope: 0.4
+  MaximumSlope: 1
   Prototype: {fileID: 8574412962073106934, guid: 70547acfe5ca5c447b68d89ef834b988,
     type: 2}
---- !u!114 &994819743
+--- !u!114 &635897130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +263,39 @@ MonoBehaviour:
   MaximumHeight: 1
   MinimumSlope: 0
   MaximumSlope: 1
---- !u!114 &1037674241
+--- !u!114 &1161760629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
+--- !u!114 &1262031842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
+--- !u!114 &1272470848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -431,22 +431,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1825738849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 1
-  MinimumSlope: 0
-  MaximumSlope: 1
 --- !u!1 &1886054333
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +527,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a73815000f037446b051dbd71492dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2110974111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
 --- !u!114 &2112269211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,12 +842,12 @@ MonoBehaviour:
   - {fileID: 128590203}
   - {fileID: 579057297}
   TreeInstanceSettings:
-  - {fileID: 199642044}
-  - {fileID: 1037674241}
-  - {fileID: 400418263}
+  - {fileID: 1272470848}
+  - {fileID: 1161760629}
+  - {fileID: 1262031842}
   DetailMapSettings:
-  - {fileID: 994819743}
-  - {fileID: 1825738849}
+  - {fileID: 635897130}
+  - {fileID: 2110974111}
   TerrainNoise: {fileID: 8708552932913635692}
   TemplateTerrain: {fileID: 1378733203}
 --- !u!114 &8708552932913635690
