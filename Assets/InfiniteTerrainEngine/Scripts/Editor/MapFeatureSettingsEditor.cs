@@ -69,21 +69,21 @@ namespace StephenLujan.TerrainEngine
             x += leftColumnWidth + horizontalMargin;
 
             // can't put the use .floatValue as ref parameter so we have to make a copy
-            float heightMin = heightMinProp.floatValue;
-            float heightMax = heightMaxProp.floatValue;
-            float slopeMin = slopeMinProp.floatValue;
-            float slopeMax = slopeMaxProp.floatValue;
+            float heightMin = heightMinProp.floatValue * 100.0f;
+            float heightMax = heightMaxProp.floatValue * 100.0f;
+            float slopeMin = slopeMinProp.floatValue * 100.0f;
+            float slopeMax = slopeMaxProp.floatValue * 100.0f;
 
-            const string heightTip = "1 represents the highest possible terrain elevation while 0 represents the lowest";
+            const string heightTip = "100% represents the highest possible terrain elevation while 0% represents the lowest.";
 
             heightMin = EditorGUI.FloatField(
                 new Rect(x, y, rightColumnWidth, labelHeight),
-                new GUIContent("Minimum Height", heightTip),
+                new GUIContent("Minimum % Height", heightTip),
                 heightMin);
             y += labelHeight;
             heightMax = EditorGUI.FloatField(
                 new Rect(x, y, rightColumnWidth, labelHeight),
-                new GUIContent("Maximum Height", heightTip),
+                new GUIContent("Maximum % Height", heightTip),
                 heightMax);
             y += labelHeight;
             EditorGUI.MinMaxSlider(
@@ -91,7 +91,7 @@ namespace StephenLujan.TerrainEngine
                 ref heightMin,
                 ref heightMax,
                 0.0f,
-                1.0f);
+                100.0f);
             y += sliderHeight;
 
             //EditorGUI.LabelField(
@@ -99,15 +99,15 @@ namespace StephenLujan.TerrainEngine
             //    $"Min, Max Slope: {slopeMin}, {slopeMax}");
             //y += labelHeight;
 
-            const string slopeTip = "A slope of 1 means vertical, 0 means flat, and 0.5 means 45°";
+            const string slopeTip = "An incline of 100% means vertical, 0% means flat, and 50% means 45° aka slope of 1";
             slopeMin = EditorGUI.FloatField(
                 new Rect(x, y, rightColumnWidth, labelHeight),
-                new GUIContent("Minimum Slope", slopeTip),
+                new GUIContent("Minimum % Incline", slopeTip),
                 slopeMin);
             y += labelHeight;
             slopeMax = EditorGUI.FloatField(
                 new Rect(x, y, rightColumnWidth, labelHeight),
-                new GUIContent("Maximum Slope", slopeTip),
+                new GUIContent("Maximum % Incline", slopeTip),
                 slopeMax);
             y += labelHeight;
             EditorGUI.MinMaxSlider(
@@ -115,15 +115,14 @@ namespace StephenLujan.TerrainEngine
                 ref slopeMin,
                 ref slopeMax,
                 0.0f,
-                1.0f);
+                100.0f);
             y += sliderHeight;
 
             //GUI.Label(new Rect(10, 40, 100, 40), GUI.tooltip);
-
-            heightMinProp.floatValue = heightMin;
-            heightMaxProp.floatValue = heightMax;
-            slopeMinProp.floatValue = slopeMin;
-            slopeMaxProp.floatValue = slopeMax;
+            heightMinProp.floatValue = Mathf.Clamp(heightMin / 100.0f, 0, 1);
+            heightMaxProp.floatValue = Mathf.Clamp(heightMax / 100.0f, 0, 1);
+            slopeMinProp.floatValue = Mathf.Clamp(slopeMin / 100.0f, 0, 1);
+            slopeMaxProp.floatValue = Mathf.Clamp(slopeMax / 100.0f, 0, 1);
         }
 
         // Draw the property inside the given rect
