@@ -120,7 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &56650119
+--- !u!114 &128590203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,13 +130,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
-  m_Name: NewLayer Splat Settings
+  m_Name: NewLayer 2 Splat Settings
   m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 0.19
+  MinimumHeight: 0.18
+  MaximumHeight: 1
   MinimumSlope: 0
-  MaximumSlope: 0.5
-  TerrainLayer: {fileID: 8574412962073106934, guid: aa0f9b8c7100e1d46bb5d6a522c836a6,
+  MaximumSlope: 0.6
+  Prototype: {fileID: 8574412962073106934, guid: 923f7fd8f383f9f489bddb5a770de929,
     type: 2}
 --- !u!1 &170076733
 GameObject:
@@ -229,7 +229,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &759154351
+--- !u!114 &199642044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,16 +238,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
-  m_Name: NewLayer 2 Splat Settings
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  MinimumHeight: 0.18
+  MinimumHeight: 0
   MaximumHeight: 1
-  MinimumSlope: 0.5
+  MinimumSlope: 0
   MaximumSlope: 1
-  TerrainLayer: {fileID: 8574412962073106934, guid: 4fbe6037155a51046adad3b18b22ab8e,
-    type: 2}
---- !u!114 &995400660
+--- !u!114 &400418263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
+--- !u!114 &579057297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,12 +273,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
   m_Name: NewLayer 3 Splat Settings
   m_EditorClassIdentifier: 
-  MinimumHeight: 0
-  MaximumHeight: 0.19
-  MinimumSlope: 0.4
-  MaximumSlope: 1
-  TerrainLayer: {fileID: 8574412962073106934, guid: bdd83886f31b04343b3caffb768a6399,
+  MinimumHeight: 0.18
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 0.4
+  Prototype: {fileID: 8574412962073106934, guid: 70547acfe5ca5c447b68d89ef834b988,
     type: 2}
+--- !u!114 &994819743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
+--- !u!114 &1037674241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3371146dfed194aa1894373b2787c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 1
+  MinimumSlope: 0
+  MaximumSlope: 1
 --- !u!218 &1378733203 stripped
 Terrain:
   m_CorrespondingSourceObject: {fileID: 727085324870813368, guid: 11724ac1daf5d67439936524d3473acf,
@@ -277,6 +323,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6205309130830055896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1425219506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
+  m_Name: NewLayer Splat Settings
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 0.19
+  MinimumSlope: 0
+  MaximumSlope: 0.5
+  Prototype: {fileID: 8574412962073106934, guid: a9160541bfa2aa44eab504b126e33485,
+    type: 2}
 --- !u!1 &1576357773
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +431,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1802740856
+--- !u!114 &1825738849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,15 +440,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
-  m_Name: NewLayer 1 Splat Settings
+  m_Script: {fileID: 11500000, guid: f70b3700efa5057428204390d49262b3, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  MinimumHeight: 0.18
+  MinimumHeight: 0
   MaximumHeight: 1
   MinimumSlope: 0
-  MaximumSlope: 0.8
-  TerrainLayer: {fileID: 8574412962073106934, guid: a84a8af5aa967bc4db3ecedf56ba1da3,
-    type: 2}
+  MaximumSlope: 1
 --- !u!1 &1886054333
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +543,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a73815000f037446b051dbd71492dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2112269211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d7d6d504c08b04dbc535117d9f269b, type: 3}
+  m_Name: NewLayer 1 Splat Settings
+  m_EditorClassIdentifier: 
+  MinimumHeight: 0
+  MaximumHeight: 0.19
+  MinimumSlope: 0.4
+  MaximumSlope: 1
+  Prototype: {fileID: 8574412962073106934, guid: 2bfe85550234884448342c11e8bd4d37,
+    type: 2}
 --- !u!114 &860400408146731247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,11 +836,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextureBlendSharpness: 0.5
-  textureSplatSettings:
-  - {fileID: 56650119}
-  - {fileID: 1802740856}
-  - {fileID: 759154351}
-  - {fileID: 995400660}
+  TextureSplatSettings:
+  - {fileID: 1425219506}
+  - {fileID: 2112269211}
+  - {fileID: 128590203}
+  - {fileID: 579057297}
+  TreeInstanceSettings:
+  - {fileID: 199642044}
+  - {fileID: 1037674241}
+  - {fileID: 400418263}
+  DetailMapSettings:
+  - {fileID: 994819743}
+  - {fileID: 1825738849}
   TerrainNoise: {fileID: 8708552932913635692}
   TemplateTerrain: {fileID: 1378733203}
 --- !u!114 &8708552932913635690
@@ -814,7 +901,6 @@ MonoBehaviour:
   DetailNoiseSampleScale: 1
   MaxDetail: 25
   MinDetail: 5
-  ShowRange: 1
   TrueNormalize: 0
   TransformMin: -0.6
   TransformMax: 0.6
@@ -851,6 +937,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  ShowRange: 1
   HeightMax: NaN
   HeightMin: NaN
 --- !u!1 &8708552932913635693

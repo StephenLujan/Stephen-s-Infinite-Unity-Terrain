@@ -25,20 +25,23 @@ namespace StephenLujan.TerrainEngine
             }
         }
 
-        /// <summary>
-        /// Controls how much blending occurs in terrain texture splatting.
-        /// </summary>
         [Range(0, 4)]
+        [Tooltip("Controls how much blending occurs in terrain texture splatting.")]
         public float TextureBlendSharpness = 1.0f;
 
+        [Tooltip("Controls where each texture is present, and how prevalent relative to others.")]
         public TextureSplatSettings[] TextureSplatSettings;
+        [Tooltip("Controls where trees are populated.")]
         public TreeInstanceSettings[] TreeInstanceSettings;
+        [Tooltip("Controls where details like grass are populated.")]
         public DetailMapSettings[] DetailMapSettings;
+
 
         public TerrainNoise TerrainNoise;
         public Terrain TemplateTerrain;
         private TerrainData templateTerrainData;
         public ConcurrentQueue<TerrainResult> Output = new ConcurrentQueue<TerrainResult>();
+        private ConcurrentQueue<Vector2Int> requests = new ConcurrentQueue<Vector2Int>();
 
 
         // Use this for initialization
@@ -58,10 +61,23 @@ namespace StephenLujan.TerrainEngine
             templateTerrainData = TemplateTerrain.terrainData;
         }
 
-        public void EnqueueTerrain(
+        public void Update()
+        {
+            // only start one per frame
+            if (!requests.IsEmpty)
+            {
+                Vector2Int position = new Vector2Int();
+                if (requests.TryDequeue(out position))
+                {
+                    StartCoroutine(TerrainCoroutine(position));
+                }
+            }
+        }
+
+        public void RequestTerrainTile(
             Vector2Int position)
         {
-            StartCoroutine(TerrainCoroutine(position));
+            requests.Enqueue(position);
         }
 
         private GameObject TerrainObject(TerrainData terrainData)

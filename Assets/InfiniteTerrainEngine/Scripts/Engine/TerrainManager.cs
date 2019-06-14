@@ -18,6 +18,7 @@ namespace StephenLujan.TerrainEngine
         /// <summary>
         /// Number of deactivated distant terrain chunks to retain in memory
         /// </summary>
+        [Tooltip("Number of deactivated distant terrain chunks to retain in memory")]
         public int terrainCacheSize = 10;
 
         /// <summary>
@@ -60,6 +61,7 @@ namespace StephenLujan.TerrainEngine
         /// <summary>
         /// terrain chunks are created up to this radius in world units
         /// </summary>
+        [Tooltip("Terrain chunks are created up to this radius in world units around the viewer or player.")]
         public int TerrainFillDistance = 2500;
         private int terrainFillDistanceSquared;
 
@@ -122,7 +124,7 @@ namespace StephenLujan.TerrainEngine
             // send coordinates to the terrain generator
             if (toCreate.TryDequeue(out Vector2Int coordinates))
             {
-                TerrainGenerator.EnqueueTerrain(coordinates);
+                TerrainGenerator.RequestTerrainTile(coordinates);
                 queuedGeneration.Add(coordinates);
             }
 
