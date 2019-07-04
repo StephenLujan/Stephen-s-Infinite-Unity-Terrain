@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace StephenLujan.TerrainEngine
 {
-    public class FastNoiseWrapper : INoise
+    public class FastNoiseWrapper : IInnerNoise
     {
         private FastNoise fastNoise;
 

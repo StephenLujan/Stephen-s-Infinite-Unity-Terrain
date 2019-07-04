@@ -14,7 +14,7 @@ namespace Assets.InfiniteTerrainEngine.Scripts.Tests
     {
         public static UnityNoiseBase addUnityNoise(GameObject gameObject)
         {
-            return gameObject.AddComponent<UnityNoise>();
+            return gameObject.AddComponent<UnityPerlinNoise>();
         }
 
         public static UnityNoiseBase addFastNoiseSIMDUnity(GameObject gameObject)

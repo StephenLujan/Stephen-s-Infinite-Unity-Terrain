@@ -27,7 +27,7 @@ namespace Assets.InfiniteTerrainEngine.Scripts.Tests
         [UnityTest]
         public IEnumerator NoiseSetNotFlat()
         {
-            Noise noise = new Noise(0, 0.1f, 3, 2.0f, 0.5f);
+            InnerNoiseUnityPerlin noise = new InnerNoiseUnityPerlin(0, 0.1f, 3, 2.0f, 0.5f);
             float[,] output = new float[3, 3];
             noise.GetNoiseSet(0, 0, ref output, true);
             Assert.AreNotEqual(output[0, 0], output[2, 0]);
@@ -38,7 +38,7 @@ namespace Assets.InfiniteTerrainEngine.Scripts.Tests
         [UnityTest]
         public IEnumerator GetNoiseNotFlat()
         {
-            Noise noise = new Noise(0, 0.1f, 3, 2.0f, 0.5f);
+            InnerNoiseUnityPerlin noise = new InnerNoiseUnityPerlin(0, 0.1f, 3, 2.0f, 0.5f);
 
             Assert.AreNotEqual(noise.GetNoise(0, 0), noise.GetNoise(9999, 9999));
             Assert.AreNotEqual(noise.GetNoise(0, 0), noise.GetNoise(0, 1));

@@ -104,7 +104,7 @@ namespace StephenLujan.TerrainEngine
             {
                 if (noise != null)
                 {
-                    noise.GetNoise().SetSeed(random.Next());
+                    noise.SetSeed(random.Next());
                 }
                 else
                 {
@@ -122,7 +122,7 @@ namespace StephenLujan.TerrainEngine
             int mapWidth = heights.GetUpperBound(1) + 1;
             int mapHeight = heights.GetUpperBound(0) + 1;
 
-            HeightNoise.GetNoise().GetNoiseSet(xStart, yStart, ref heights, true);
+            HeightNoise.GetNoiseSet(xStart, yStart, ref heights, true);
             float min = float.PositiveInfinity;
             float max = float.NegativeInfinity;
             float currentHeight = 0;
@@ -198,7 +198,7 @@ namespace StephenLujan.TerrainEngine
             int height = detailMap.GetUpperBound(1) + 1;
             float[,] noise = new float[width, height];
             //DetailNoise.GetNoise().GetSampledNoiseSet(xStart + offset, yStart + offset, DetailNoiseSampleScale, ref noise);
-            DetailNoise.GetNoise().GetNoiseSet(xStart + offset, yStart + offset, ref noise);
+            DetailNoise.GetNoiseSet(xStart + offset, yStart + offset, ref noise);
 
             for (int x = 0; x < width; x++)
             {

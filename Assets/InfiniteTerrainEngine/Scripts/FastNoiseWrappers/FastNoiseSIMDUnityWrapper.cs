@@ -1,9 +1,12 @@
 ﻿#define FASTNOISE
 #if FASTNOISE
+using UnityEngine;
+
 namespace StephenLujan.TerrainEngine
 {
     public class FastNoiseSIMDUnityWrapper : UnityNoiseBase
     {
+        [Tooltip("Select a Fast Noise SIMD Unity script component from the FastNoise Library")]
         public FastNoiseSIMDUnity fastNoiseSIMDUnity;
 
         private FastNoiseSIMDWrapper fastNoiseSIMDWrapper;
@@ -18,7 +21,7 @@ namespace StephenLujan.TerrainEngine
             fastNoiseSIMDWrapper = new FastNoiseSIMDWrapper(fastNoiseSIMDUnity.fastNoiseSIMD);
         }
 
-        public override INoise GetNoise()
+        protected override IInnerNoise GetNoise()
         {
             return fastNoiseSIMDWrapper;
         }

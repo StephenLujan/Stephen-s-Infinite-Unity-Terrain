@@ -2,12 +2,12 @@
 using UnityEngine;
 namespace StephenLujan.TerrainEngine
 {
-    [CustomEditor(typeof(UnityNoise))]
+    [CustomEditor(typeof(UnityPerlinNoise))]
     public class UnityNoiseEditor : Editor
     {
         public override void OnInspectorGUI()
         {
-            UnityNoise target = (UnityNoise)this.target;
+            UnityPerlinNoise target = (UnityPerlinNoise)this.target;
             DrawDefaultInspector();
             EditorGUILayout.Separator();
         }
@@ -19,9 +19,9 @@ namespace StephenLujan.TerrainEngine
 
         public override void DrawPreview(Rect previewArea)
         {
-            UnityNoise target = (UnityNoise)this.target;
+            UnityPerlinNoise target = (UnityPerlinNoise)this.target;
             // previewArea keeps coming as 0,0,1,1?
-            Texture2D tex = target.GetNoise().GetTexture((int)previewArea.width, (int)previewArea.height);
+            Texture2D tex = target.GetTexture((int)previewArea.width, (int)previewArea.height);
             //Texture2D tex = target.GetNoise().GetTexture(100, 100);
             GUI.DrawTexture(previewArea, tex, ScaleMode.StretchToFill, false);
         }

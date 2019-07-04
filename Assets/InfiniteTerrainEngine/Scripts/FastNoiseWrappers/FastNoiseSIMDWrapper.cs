@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace StephenLujan.TerrainEngine
 {
-    class FastNoiseSIMDWrapper : INoise
+    class FastNoiseSIMDWrapper : IInnerNoise
     {
         private FastNoiseSIMD fastNoiseSIMD;
 
